@@ -1,0 +1,171 @@
+    1  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+    2  bash Miniconda3-latest-Linux-x86_64.sh
+    3  conda env list
+    4  env list
+    5  cd ~
+    6  git clone https://github.com/yaroshulik/bioinformatics_hw_Ponomareva.git
+    7  cd bioinformatics_hw_Ponomareva
+    8  nano README.md
+    9  git add README.md
+   10  git commit -m "Init"
+   11  git config --global user.email "ponomareva.iaa@phystech.edu"
+   12  git config --global user.name "Yaroshulik"
+   13  git commit -m "Init"
+   14  git push origin master
+   15  git push origin main
+   16  git config --global credential.helper cache
+   17  mkdir -p linux_task/data/raw
+   18  cd linux_task/data/raw
+   19  touch sample1.tsv sample2.tsv sample3.tsv
+   20  echo -e "GeneID\tExpression_Value" > sample1.tsv
+   21  cat sample1.tsv
+   22  cd ~/bioinformatics_hw_Ponomareva
+   23  git status
+   24  git add linux_task/
+   25  git commit -m "Create raw data structure@
+   26  git commit -m "Create raw data structure@
+   27  git commit -m "Create raw data structure"
+   28  git push origin main
+   29  cd ~/bioinformatics_hw_Ponomareva/linux_task/data/raw
+   30  cat > sequencing_summary.txt << EOF
+   31  run_id: RUN001
+   32  date: 2026-02-18
+   33  sample: sample1
+   34  platform: Illumina
+   35  read_length: 150
+   36  total_reads: 1024
+   37  sample: sample2
+   38  total_reads: 2048
+   39  sample: sample3
+   40  total_reads: 4096
+   41  EOF
+   42  grep "sample" sequencing_summary.txt > samples_list.txt
+   43  count=$(wc -l <samples_list.txt)
+   44  echo "Total samples found: $count" >> samples_list.txt
+   45  tail -5 samples_list.txt
+   46  cd ~/bioinformatics_hw_Ponomareva
+   47  git add linux_task/
+   48  git commit -m "Add sample list and count"
+   49  git push origin main
+   50  git branch git-practice
+   51  git checkout git-practice
+   52  echo "This is very important data." > important_note.txt
+   53  git add important_note.txt
+   54  git commit -m "Add important note"
+   55  rm important_note.txt
+   56  ls -la important_note.txt
+   57  git status
+   58  git restore important_note.txt
+   59  ls -la important_note.txt
+   60  cat important_note.txt
+   61  echo "git restore important_note.txt" > git_command.txt
+   62  git add git_command.txt
+   63  git commit -m "Restore delered file"
+   64  git push origin git-practice
+   65  history > commands_history.txt
+   66  git status
+   67  git add commands_history.txt
+   68  git commit -m "Add commands history"
+   69  git push origin git-practice
+   70  git branch
+   71  git checkout main
+   72  mkdir r_task
+   73  cd r_task
+   74  nano first_plot.R
+   75  Rscript first_plot.R
+   76  sudo apt update
+   77  R
+   78  sudo apt update
+   79  sudo apt install r-base-dev -y
+   80  Rscript first_plot.R
+   81  ls -la
+   82  cd ~/bioinformatics_hw_Ponomareva
+   83  git status
+   84  git add r_task/
+   85  git commit -m "Add R script and first plot"
+   86  git push origin main
+   87  git pull origin main
+   88  git clone https://github.com/yaroshulik/bioinformatics_hw_Ponomareva_2026-2027.git
+   89  git clone https://github.com/yaroshulik/https-github.com-yaroshulik-bioinformatics_hw_Ponomareva_2026.git
+   90  cd bioinformatics_hw_Ponomareva_2026
+   91  git clone https://github.com/yaroshulik/bioinf_hw_Ponomareva.git
+   92  cd bioinf_hw_Ponomareva
+   93  nano README.md
+   94  git add README.md
+   95  git commit -m "Init"
+   96  git push origin main
+   97  mkdir -p linux_task/data/raw
+   98  cd linux_task/data/raw
+   99  touch sample1.tsv sample2.tsv sample3.tsv
+  100  echo -e "GeneID\tExpression_Value" > sample1.tsv
+  101  cat sample1.tsv
+  102  cd ~/bioinformatics_hw_Ponomareva
+  103  git status
+  104  git clone https://github.com/yaroshulik/bioinf_hw_Ponomareva.git
+  105  cd bioinf_hw_Ponomareva
+  106  nano README.md
+  107  git add README.md
+  108  git commit -m "Init"
+  109  git push origin main
+  110  mkdir -p linux_task/data/raw
+  111  cd linux_task/data/raw
+  112  touch sample1.tsv sample2.tsv sample3.tsv
+  113  cat sample1.tsv
+  114  git clone https://github.com/yaroshulik/bioinformatics_hw_Ponomareva.git
+  115  git clone https://github.com/yaroshulik/bioinformatics_homework_Ponomareva.git
+  116  cd bioinformatics_homework_Ponomareva
+  117  nano README.md
+  118  git add README.md
+  119  git commit -m "Init"
+  120  git push origin main
+  121  mkdir -p linux_task/data/raw
+  122  cd linux_task/data/raw
+  123  touch sample1.tsv sample2.tsv sample3.tsv
+  124  echo -e "GeneID\tExpression_Value" > sample1.tsv
+  125  cat sample1.tsv
+  126  cd ~/bioinformatics_homework_Ponomareva
+  127  git status
+  128  git add linux_task/
+  129  git commit -m "Create raw data structure"
+  130  git push origin main
+  131  cd ~/bioinformatics_homework_Ponomareva/linux_task/data/raw
+  132  cat > sequencing_summary.txt << EOF
+run_id: RUN001
+date: 2026-02-18
+sample: sample1
+platform: Illumina
+read_length: 150
+total_reads: 1024
+sample: sample2
+total_reads: 2048
+sample: sample3
+total_reads: 4096
+EOF
+
+  133  grep "sample" sequencing_summary.txt > samples_list.txt
+  134  count=$(wc -l < samples_list.txt)
+  135  echo "Total samples found: $count" >> samples_list.txt
+  136  tail -5 samples_list.txt
+  137  cd ~/bioinformatics_homework_Ponomareva
+  138  git status
+  139  git add linux_task/
+  140  git commit -m "Add sample list and count"
+  141  git push origin main
+  142  git branch git-practice
+  143  git checkout git-practice
+  144  echo "This is very important data." > important_note.txt
+  145  git add important_note.txt
+  146  git commit -m "Add important note"
+  147  rm important_note.txt
+  148  ls -la important_note.txt
+  149  git status
+  150  git restore important_note.txt
+  151  ls -la important_note.txt
+  152  cat important_note.txt
+  153  echo "git restore important_note.txt" > git_command.txt
+  154  git add git_command.txt
+  155  git status
+  156  git commit -m "Restore deleted file"
+  157  git push origin git-ptactice
+  158  git push origin git-practice
+  159  history > commands_history.txt
