@@ -1,0 +1,17 @@
+marR
+marA
+marB
+acrR
+acrA
+acrB
+tolC
+gyrA
+gyrB
+parC
+parE
+rpoB
+folP
+ampC
+cat
+tetA
+tetB
